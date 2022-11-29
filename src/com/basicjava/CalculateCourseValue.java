@@ -82,7 +82,7 @@ public class CalculateCourseValue {
             } else {
                 System.out.println("Please check again your name and identification");
             }
-            
+
         } else {
             System.out.println("Field cannot be empty");
         }
