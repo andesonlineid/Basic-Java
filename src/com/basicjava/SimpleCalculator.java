@@ -8,9 +8,8 @@ public class SimpleCalculator {
 
         System.out.println("=== Simple Calculator Program ===");
 
-        int firstNumber, secondNumber;
+        float firstNumber, secondNumber;
         float result;
-        
         char aritmathOperator;
         // input
         // Call class/library Scanner in java and create object from it
@@ -25,33 +24,38 @@ public class SimpleCalculator {
         // Call method from the object that we've made before
 
         System.out.print("Input your first Number : ");
-        firstNumber = numberFirst.nextInt();
+        firstNumber = numberFirst.nextFloat();
         System.out.print(("Input aritmatic operator : "));
         // next() method to get string input and add charAt method to get character inside () put index of the character
         aritmathOperator = operatorSymbol.next().charAt(0);
         System.out.print("Input your second number : ");
-        secondNumber = numberSecond. nextInt();
+        secondNumber = numberSecond.nextFloat();
 
         // Process
         if(aritmathOperator == '+') {
             // casting or convert data type    
-            result = (float) firstNumber + secondNumber;
+            result =  firstNumber + secondNumber;
             System.out.printf("You choose operator : %s \n Result : %f ",aritmathOperator,result);
 
         } else if (aritmathOperator == '-') {
-            result = (float) firstNumber - secondNumber;
+            result = firstNumber - secondNumber;
             System.out.printf("You choose operator : %s \n Result : %f ",aritmathOperator,result);
 
         } else if (aritmathOperator == '*') {
-            result = (float) firstNumber * secondNumber;
+            result = firstNumber * secondNumber;
             System.out.printf("You choose operator : %s \n Result : %f ",aritmathOperator,result);
 
         } else if (aritmathOperator == '/') {
-            result = (float) firstNumber / secondNumber;
-            System.out.printf("You choose operator : %s \n Result : %f ",aritmathOperator,result);
+            if(secondNumber != 0) {
+                result = firstNumber / secondNumber;
+                System.out.printf("You choose operator : %s \n Result : %f ",aritmathOperator,result);
+
+             } else {
+                System.out.print("Divided with 0 the result gonna be infinity");
+             }
 
         } else if (aritmathOperator == '%') {
-            result = (float) firstNumber % secondNumber;
+            result = firstNumber % secondNumber;
             System.out.printf("You choose operator : %s \n Result : %f ",aritmathOperator,result);
 
         } else {
