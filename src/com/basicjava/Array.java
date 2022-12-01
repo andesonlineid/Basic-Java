@@ -5,13 +5,23 @@ import java.util.Scanner;
 
 public class Array {
 
+// standart loop
+    // private static float meanCal(float[] value) {
+    //     float keepValue = 0;
+      
+    //     for(int i = 0; i < value.length; i++) {
+    //         keepValue += value[i];
+    //     }
+    //     return keepValue/4;
+    // }
 
     private static float meanCal(float[] value) {
         float keepValue = 0;
-      
-        for(int i = 0; i < value.length; i++) {
-            keepValue += value[i];
-        }
+    //   Loop using forEach
+    // Using forEach we doesn't need index anymore
+       for(float numbers : value) {
+                keepValue += numbers;
+       }
         return keepValue/4;
     }
   
